@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'IM Fell English', serif;
+  background-color: #000;
+  overflow: hidden;
+  color: #f5f0dc;
+}
+
+/* Star background */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  animation: twinkle 10s infinite;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Scroll styling */
+.scroll-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: float 6s ease-in-out infinite;
+  transition: opacity 1s ease;
+}
+
+.scroll-paper {
+  background: url('https://i.imgur.com/QkYzNpU.png') center/cover no-repeat;
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  border: 5px solid #c9b88d;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 245, 200, 0.3);
+}
+
+.scroll-paper h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.scroll-paper p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Button */
+#evasiveBtn {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #7d2d2d;
+  color: #fffbe6;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Message Reveal */
+.reveal-message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.reveal-message.show {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .scroll-paper {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #evasiveBtn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
