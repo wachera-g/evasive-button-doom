@@ -44,15 +44,10 @@ body, html {
 }
 
 .scroll-paper {
-  background: url('https://i.imgur.com/QkYzNpU.png') center/cover no-repeat;
-  padding: 40px;
-  width: 90%;
-  max-width: 500px;
-  border: 5px solid #c9b88d;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(255, 245, 200, 0.3);
+  background: url('https://cdn.pixabay.com/photo/2016/03/31/19/32/scroll-1298484_1280.png') no-repeat center/contain;
+  /* ... rest of styles ... */
 }
+
 
 .scroll-paper h1 {
   font-size: 2em;
